@@ -19,42 +19,85 @@
 \vspace{0.15in}
 
 
-To whom it may concern:
+Dear Dr. Heagy,
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-tempor incididunt ut labore et dolore magna aliqua. Urna duis convallis
-convallis tellus id interdum velit laoreet. Porta lorem mollis aliquam
-ut. Auctor augue mauris augue neque gravida in fermentum. Nulla posuere
-sollicitudin aliquam ultrices. Ultrices dui sapien eget mi proin sed.
-Lorem donec massa sapien faucibus et. Non quam lacus suspendisse
-faucibus interdum posuere lorem ipsum dolor. Odio ut sem nulla pharetra
-diam sit amet. Sapien faucibus et molestie ac feugiat sed lectus. A
-diam maecenas sed enim ut. Luctus accumsan tortor posuere ac ut
-consequat. Varius duis at consectetur lorem donec massa sapien
-faucibus. Neque ornare aenean euismod elementum nisi quis eleifend quam
-adipiscing.
+I am writing to express interest in the recently advertised postdoctoral
+position "Computational geophysics for mineral exploration and mining" at the
+UBC Geophysical Inversion Facility.
+A little bit about me; I am from
+Colorado, USA, and received my undergraduate degree in Geology from
+Colorado College in 2018.
+I then moved to Wellington, New Zealand, in
+2019 to begin my Ph.D. at the Antarctic Research Centre at the Victoria
+University of Wellington.
+I submitted my Ph.D. thesis two weeks ago and will defend in the coming months.
 
-Faucibus purus in massa tempor nec feugiat nisl pretium fusce. Faucibus
-vitae aliquet nec ullamcorper sit. Quam nulla porttitor massa id neque
-aliquam vestibulum morbi blandit. Urna duis convallis convallis tellus.
-Sem et tortor consequat id porta nibh venenatis cras sed. Magna sit
-amet purus gravida quis. Ut pharetra sit amet aliquam. Justo nec
-ultrices dui sapien eget mi proin sed. Lectus proin nibh nisl
-condimentum id venenatis a. Cum sociis natoque penatibus et magnis dis.
-Ligula ullamcorper malesuada proin libero nunc consequat interdum
-varius sit. Dictum sit amet justo donec.
+During this Ph.D., I used airborne gravity and magnetic data to
+investigate the Earth beneath the floating Ross Ice Shelf in Antarctica.
+My primary objectives were to better understand the components of the
+Earth which influence how the ice sheet behaves. These components
+include the geologic composition and shape of
+the seafloor beneath the ice shelf. The first chapter of the thesis used
+airborne magnetics data collected over the entire ice shelf and a
+depth-to-magnetic source technique, Werner deconvolution, to model the contact
+between magnetic basement rock, and overlying sediments. From this, we
+found a continuous drape of non-magnetic sediments over the seafloor, as
+well as several distinct depocenters with several kilometers of
+sediment. This research was published open-access in Geophysical Research
+Letters (\url{https://doi.org/10.1029/2021GL097371}) and the code and
+Jupyter notebooks are available in a Github repository (\url{https://github.com/mdtanker/RIS_basement_sediment}).
+
+
+The second main objective of my Ph.D. was to model the bathymetry
+beneath the Ross Ice Shelf through a gravity inversion. This style
+of non-linear geometric gravity inversion for bathymetry is commonly
+used in sub-ice shelf settings but is almost exclusively accomplished with
+proprietary, expensive, and poorly documented inversion algorithms (e.g.
+Oasis Montaj). Instead, I choose to develop a new inversion written in Python, utilizing several existing
+tools, such as \textit{Harmonica} for forward gravity calculations and
+\textit{Scipy} for least-squares regression.
+% As a means of testing the inversion's capabilities, and learning about
+% the sensitivity of the inversion to various data components, such as
+% noise in the gravity data and the number of \textit{a priori}
+% bathymetry measurements, I performed a suite of inversions on
+% synthetic datasets.
+I first tested this inversion on a suite of synthetic models and finally
+used the inversion to create a new model of bathymetry beneath the Ross
+Ice Shelf, revealing some large differences with past models of
+bathymetry.
+% From this work, I plan in the next few months to publish a methods paper on the inversion and a results paper on the Ross Ice Shelf.
+If you would like any more details, I am happy to share my submitted
+thesis with you.
+
+I am passionate about geophysical exploration and its applications to
+studying the Earth. While I haven't worked directly with EM data, I
+would be very excited to incorporate a new tool into my repertoire. I
+believe my knowledge of inversion theory, my experience coding in
+Python, both independently and in a collaborative setting (my
+contributions to Fatiando packages), and my commitment to conducting open-source
+research makes me well-suited for this postdoc. Additionally, I think my
+past experiences and collaborations could bring interesting
+opportunities for using EM data to study the sub-ice environment of Antarctica.
+
 
 Thank you for taking the time to review my application. I look forward
-to hopefully meeting with you in the future to further discuss my
-qualifications for a position as a [POSITION NAME] at [COMPANY NAME]
-this upcoming summer. If you have any questions, please feel free to
-email me at \href{mailto:john.doe@example.com}{john.doe@example.com} or
-call me at \href{tel:+1-123-456-7890}{123-456-7890}.
+to hopefully meeting with you to further discuss my
+qualifications for a this postdoc. If you have any questions, please feel free to
+email me at \href{mailto:matt.d.tankersley@gmail.com}{matt.d.tankersley@gmail.com}.
+
+
+For letters of reference, please feel free to use the below contacts:
+\begin{itemize}
+    \item Huw Horgan, Ph.D. Primary Supervisor: \href{mailto:huw.horgan@slf.ch}{huw.horgan@slf.ch}
+    \item Fabio Caratori-Tontini, Ph.D. Secondary Supervisor: \href{mailto:fabio.caratori.tontini@unige.it}{fabio.caratori.tontini@unige.it}
+    \item Christine Siddoway, Collaborator: \href{mailto:csiddoway@coloradocollege.edu}{csiddoway@coloradocollege.edu}
+\end{itemize}
+
 
 Sincerely,
 
 \vspace{.15in}
 
-John Doe
+Matt Tankersley
 
 \end{document}
