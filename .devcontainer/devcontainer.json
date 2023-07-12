@@ -25,6 +25,7 @@
         "files.eol": "\n",
         // Latex settings
         "latex-workshop.chktex.enabled": true,
+        // "latex-workshop.latex.outDir": "../",
         "latex-workshop.latex.clean.subfolder.enabled": true,
         "latex-workshop.latex.autoClean.run": "onBuilt",
         "editor.formatOnSave": true,

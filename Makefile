@@ -1,6 +1,6 @@
 
 cv:
-	tectonic -X compile src/tankersley_cv.tex --outdir .
+	tectonic -X compile src/tankersley_cv.tex
 
 letter:
-	tectonic -X compile src/tankersley_coverletter.tex --outdir cover_letters/
+	tectonic -X compile src/tankersley_coverletter.tex
