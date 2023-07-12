@@ -23,6 +23,20 @@
 \RequirePackage{graphicx}
 \RequirePackage{tikz}
 
+% Define custom environments
+\RequirePackage{environ}
+
+% Define multipage tables (used for cv entries)
+\RequirePackage{tabularx}
+\RequirePackage{ltablex}
+
+% Allow multiple columns
+\RequirePackage{multicol}
+
+% Boolean operators
+\usepackage{ifthen}
+
+
 %% Add advanced table formatting support
 % From https://gist.github.com/LanternD/1edd0fcc64f287d841b6da3ec38c69a2
 \RequirePackage{array}
@@ -130,3 +144,47 @@
 \setlength{\textwidth}{7.5in}
 \setlength{\textheight}{10in}
 \pagenumbering{arabic}
+
+
+\newcommand{\DOI}[1]{%
+    \href{https://www.doi.org/#1}{#1}
+}
+
+% Entries
+\newcommand{\entriespad}{0.75em}
+\NewEnviron{cventries}{
+    \vspace{-1em}
+    \begin{tabularx}{\textwidth}{p{0.12\textwidth} p{0.82\textwidth}}
+        \BODY{}
+    \end{tabularx}
+}
+\newcommand{\singleline}[2]{{#1} & {#2} \vspace{\entriespad} \\}
+\newcommand{\multiline}[3]{{#1} & {\textbf{#2} \newline {#3}} \vspace{0.6em} \\}
+
+% Papers
+\newcommand{\paper}[5]{%
+    {#1}
+    &
+    {\textbf{#2}, \emph{#3} \newline {#4} \newline doi:~\DOI{#5}}
+    \vspace{\entriespad} \\
+}
+
+% In-Prep Papers
+\newcommand{\inpreppaper}[3]{%
+    {#1}
+    &
+    {\textbf{#2}, \newline {#3}}
+    \vspace{\entriespad} \\
+}
+
+% Talks
+\newcommand{\talk}[5]{%
+    {#1}
+    &
+    {%
+        \textbf{#2}, \emph{#3}%
+        \ifthenelse{\equal{#4}{}}{}{\newline {#4}}%
+        \ifthenelse{\equal{#5}{}}{}{\newline doi:~\DOI{#5}}%
+    }
+    \vspace{\entriespad} \\
+}
