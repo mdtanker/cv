@@ -1,5 +1,65 @@
 <div align="center">
 
+# Curriculum Vitae
+</div>
+
+Source files for building my academic CV and coverletters from LaTex files. This repository is primarily from [Expressive Resume](https://github.com/thehale/expressive-resume), with some changes inspired by [Santi Soler](https://github.com/santisoler/cv) and [Leo Uieda](https://github.com/leouieda/cv).
+
+Download the latest compiled CV as a PDF: [](https://github.com/mdtanker/cv/raw/tankersley_cv.pdf)
+
+# How to build
+
+## Option 1: Automatic compiling with Docker and VS Code
+
+Install [Docker](https://docs.docker.com/get-docker/) and [VS
+Code](https://code.visualstudio.com/) (including the [Remote Containers
+Extension](https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.remote-containers)) on your machine.
+
+Open this folder in VS Code, and accept the **Reopen in Container** prompt.
+
+- If you don't see this pop-up, go to `View -> Command Palette ->
+  Remote-Containers: Re-Open Folder in Container`
+
+Any changes to the `.tex` files will trigger an automatic rebuild and generate new PDF's.
+
+## Option 2: Manual compiling with Tectonic
+
+Within Python, preferably a `conda` environment, install [Tectonic](https://tectonic-typesetting.github.io/en-US/) with `conda install tectonic`.
+
+Use the included Makefile to compile the `.tex` files.
+
+```
+make cv
+make letter
+```
+
+# Tips
+
+If using VS Code, install the [Grammerly extension](https://github.com/znck/grammarly) for high-quality spell and grammar checks.
+
+</br>
+</br>
+</br>
+</br>
+</br>
+</br>
+</br>
+</br>
+</br>
+</br>
+</br>
+</br>
+</br>
+</br>
+</br>
+</br>
+</br>
+</br>
+
+### From the `Expressive Resume` template
+
+<div align="center">
+
 # Expressive Resume
 
 A beautiful resume/cover letter LaTeX template pair that are extraordinarily
