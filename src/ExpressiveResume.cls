@@ -22,6 +22,7 @@
         phone,  % Must be in XXX-XXX-XXXX format to become a valid link
         linkedin,
         github,
+        orcid,
         city,  % Ignored if `state` is not also provided
         state,
         qrcode,  % Path to an image of a 1000x1000px QR Code
@@ -31,38 +32,48 @@
         \nametitle{\commandkey{firstname}}{\ifcommandkey{middleinitial}{\commandkey{middleinitial}. }{}\commandkey{lastname}}
         {%
             \ifcommandkey{email}%
-                {%
-                    \email{\commandkey{email}}%
-                    \ifcommandkey{phone}{\contactseparator}%
-                        {\ifcommandkey{linkedin}{\contactseparator}%
-                            {\ifcommandkey{github}{\contactseparator}%
-                                {\ifcommandkey{state}{\contactseparator}{}}}}%
-                }%
-                {}%
+            {%
+                \email{\commandkey{email}}%
+                \ifcommandkey{phone}{\contactseparator}%
+                {\ifcommandkey{linkedin}{\contactseparator}%
+                    {\ifcommandkey{github}{\contactseparator}%
+                        {\ifcommandkey{orcid}{\contactseparator}}%
+                            {\ifcommandkey{state}{\contactseparator}{}}}}%
+            }%
+            {}%
             \ifcommandkey{phone}%
-                {%
-                    \phone{\commandkey{phone}}%
-                    \ifcommandkey{linkedin}{\contactseparator}%
-                        {\ifcommandkey{github}{\contactseparator}%
-                            {\ifcommandkey{state}{\contactseparator}{}}}%
-                }%
-                {}%
+            {%
+                \phone{\commandkey{phone}}%
+                \ifcommandkey{linkedin}{\contactseparator}%
+                {\ifcommandkey{github}{\contactseparator}%
+                    {\ifcommandkey{orcid}{\contactseparator}}%
+                        {\ifcommandkey{state}{\contactseparator}{}}}%
+            }%
+            {}%
             \ifcommandkey{linkedin}%
-                {%
-                    \linkedin{\commandkey{linkedin}}%
-                    \ifcommandkey{github}{\contactseparator}%
+            {%
+                \linkedin{\commandkey{linkedin}}%
+                \ifcommandkey{github}{\contactseparator}%
+                    {\ifcommandkey{orcid}{\contactseparator}}%
                         {\ifcommandkey{state}{\contactseparator}{}}%
-                }%
-                {}%
+            }%
+            {}%
             \ifcommandkey{github}%
-                {%
-                    \github{\commandkey{github}}%
-                    \ifcommandkey{state}{\contactseparator}{}%
-                }%
-                {}%
+            {%
+                \github{\commandkey{github}}%
+                \ifcommandkey{orcid}{\contactseparator}%
+                {\ifcommandkey{state}{\contactseparator}{}}%
+            }%
+            {}%
+            \ifcommandkey{orcid}%
+            {%
+                \orcid{\commandkey{orcid}}%
+                \ifcommandkey{state}{\contactseparator}{}%
+            }%
+            {}%
             \ifcommandkey{state}%
-                {\location{\ifcommandkey{city}{\commandkey{city}, }{}\commandkey{state}}}%
-                {}%
+            {\location{\ifcommandkey{city}{\commandkey{city}, }{}\commandkey{state}}}%
+            {}%
         }
     \end{flushleft}
 

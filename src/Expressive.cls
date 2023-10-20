@@ -116,13 +116,16 @@
     \medskip
 }
 \newcommand{\contactseparator}{
-    \quad\textbar\quad\hspace{1pt}
+    % \quad\textbar\quad\hspace{1pt}
+    \;\;\textbar\;\;\hspace{1pt}
 }
 \newcommand{\email}[1]{\faIcon{envelope} \href{mailto:#1}{#1}}
 \newcommand{\phone}[1]{\faIcon{phone-alt} \href{tel:+1-#1}{#1}}
 \newcommand{\github}[1]{\faIcon{github} \href{https://github.com/#1/}{#1}}
+\newcommand{\orcid}[1]{\faIcon{orcid} \href{https://orcid.org/#1/}{#1}}
 \newcommand{\linkedin}[1]{\faIcon{linkedin} \href{https://linkedin.com/in/#1/}{#1}}
 \newcommand{\location}[1]{\faIcon{map-marker-alt} #1}
+
 % Experience/Achievements
 \newcommand{\tech}[1]{\textbf{#1}}
 \newcommand{\role}[2]{\textbf{#2 | \emph{#1}}}
@@ -162,10 +165,10 @@
 \newcommand{\multiline}[3]{{#1} & {\textbf{#2} \newline {#3}} \vspace{0.6em} \\}
 
 % Papers
-\newcommand{\paper}[5]{%
+\newcommand{\paper}[6]{%
     {#1}
     &
-    {\textbf{#2}, \emph{#3} \newline {#4} \newline doi:~\DOI{#5}}
+    {\textbf{#2}, \emph{#3} \newline {#4} \newline doi:~\DOI{#5} \newline {#6}}
     \vspace{\entriespad} \\
 }
 
@@ -182,8 +185,8 @@
     {#1}
     &
     {\textbf{#2}, \emph{#3}%
-    \ifthenelse{\equal{#4}{}}{}{\newline {#4}}%
-    \ifthenelse{\equal{#5}{}}{}{\newline doi:~\DOI{#5}}%
-    }
+            \ifthenelse{\equal{#4}{}}{}{\newline {#4}}%
+            \ifthenelse{\equal{#5}{}}{}{\newline doi:~\DOI{#5}}%
+        }
     \vspace{\entriespad} \\
 }
