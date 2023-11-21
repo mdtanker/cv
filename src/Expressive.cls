@@ -111,7 +111,8 @@
 %% ----- Custom Commands -----
 % Contact Information
 \newcommand{\nametitle}[2]{%
-    { \Huge #1 \textsc{#2} }
+    % { \Huge #1 \textsc{#2} }
+    { \LARGE #1 \textsc{#2} }
 
     \medskip
 }

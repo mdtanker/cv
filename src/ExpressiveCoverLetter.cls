@@ -13,7 +13,8 @@
 \RequirePackage{ragged2e}
 
 %% Define page layout
-\RequirePackage[margin=1in]{geometry}
+% \RequirePackage[margin=1in]{geometry}
+\RequirePackage[top=1.5cm,bottom=1.5cm,right=2.2cm,left=2.2cm]{geometry}
     \pagestyle{empty}
     \setlength{\parindent}{0pt}
     \setlength{\parskip}{\baselineskip}
@@ -34,6 +35,7 @@
         ]{
     \begin{Center}
         \nametitle{\commandkey{firstname}}{\ifcommandkey{middleinitial}{\commandkey{middleinitial}. }{}\commandkey{lastname}}
+        \vspace{-2em}
         \rule{\linewidth}{1pt}
 
         {%
